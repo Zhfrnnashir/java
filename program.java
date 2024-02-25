@@ -16,18 +16,18 @@ public class program {
         System.out.print("Masukkan Tanggal Lahir (yyyy-MM-dd): ");
         String tanggalLahirStr = scanner.next();
 
-        // Konversi string tanggal lahir menjadi objek LocalDate
+
         LocalDate tanggalLahir = LocalDate.parse(tanggalLahirStr);
 
-        // Hitung umur menggunakan java.time.Period
+ 
         LocalDate tanggalSekarang = LocalDate.now();
         Period period = Period.between(tanggalLahir, tanggalSekarang);
         int umur = period.getYears();
 
-        // Konversi jenis kelamin menjadi string lengkap
+     
         String jenisKelaminLengkap = (jenisKelamin == 'L' || jenisKelamin == 'l') ? "Laki-laki" : "Perempuan";
 
-        // Output informasi data diri
+    
         System.out.println("\n=== Data Diri ===");
         System.out.println("Nama: " + nama);
         System.out.println("Jenis Kelamin: " + jenisKelaminLengkap);
